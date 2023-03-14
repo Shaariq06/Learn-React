@@ -18,7 +18,9 @@ const router = createBrowserRouter(
       <Route path="/" element={<App />} />
       <Route path="user-details" element={<UserDetails />} />
     </Route>
-  )
+  ), {
+    basename: '/Learn-React'
+  }
 );
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
