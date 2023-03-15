@@ -37,6 +37,7 @@ const submitHandler = (event) => {
 
   return (
     <div className="App">
+      <h1 className='titles'>React Form</h1>
       <form>
         <p>
           First Name: <input type = "text" name='firstName' placeholder='First name' onChange={changeHandler}/>
