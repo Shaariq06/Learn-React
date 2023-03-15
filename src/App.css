@@ -1,0 +1,33 @@
+body {
+  font-family: Nanum Myeongjo;
+  background-color: #131523;
+  margin: 0 auto;
+  color: white;
+  text-align: center;
+  font-size: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+input {
+  width: 50%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+
+.titles {
+  font-family: Nanum Myeongjo;
+}
+
+.btn-submit {
+  background-color: darkcyan;
+  border: 1px solid darkcyan;
+  border-radius: 10px;
+  color: ghostwhite;
+  font-size: 20px;
+  padding: 15px;
+  width: 100%;
+  font-family: Nanum Myeongjo;
+}
