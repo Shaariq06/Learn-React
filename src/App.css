@@ -1,4 +1,5 @@
 body {
+  font-family: Nanum Myeongjo;
   background-color: #13152300;
   margin: 0 auto;
   color: white;
@@ -16,12 +17,17 @@ input {
   box-sizing: border-box;
 }
 
+.titles {
+  font-family: Nanum Myeongjo;
+}
 
 .btn-submit {
+  background-color: darkcyan;
+  border: 1px solid darkcyan;
+  border-radius: 10px;
+  color: ghostwhite;
+  font-size: 20px;
   padding: 15px;
-  font-size: 32px;
-  border: 1px solid cyan;
-  border-radius: 15px;
-  background-color: cyan;
-  color: white;
+  width: 100%;
+  font-family: Nanum Myeongjo;
 }

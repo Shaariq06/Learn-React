@@ -5,7 +5,7 @@ export const UserDetails = (props) => {
 
     return (
         <div>
-            <h2>User Details</h2>
+            <h2 className="titles">User Details</h2>
             <p>First Name: {state.firstName}</p>
             <p>Last Name: {state.lastName}</p>
         </div>
