@@ -1,5 +1,5 @@
 body {
-  background-color: black;
+  background-color: #13152300;
   margin: 0 auto;
   color: white;
   text-align: center;
@@ -20,8 +20,8 @@ input {
 .btn-submit {
   padding: 15px;
   font-size: 32px;
-  border: 1px solid blue;
+  border: 1px solid cyan;
   border-radius: 15px;
-  background-color: blue;
+  background-color: cyan;
   color: white;
 }
