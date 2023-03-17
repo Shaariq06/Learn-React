@@ -8,13 +8,11 @@ const Nav = ({links}) => {
               <li><a>left section</a></li>
             </ul>
         </section> */}
-        <section className='section-nav'>
-          <ul>
-            {links.map(({link, label}) => (
-            <li><a href={link} className="nav-lower-section-link">{label}</a></li>
-            ))}
-          </ul>
-        </section>
+        <div className='right-nav'>
+          {links.map(({link, label}) => (
+          <a href={link} className="nav-lower-section-link">{label}</a>
+          ))}
+        </div>
     </div>
   )
 }

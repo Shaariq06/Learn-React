@@ -4,33 +4,24 @@
 }
 
 .navbar {
-    position: sticky;
-    top: 0px;
-    z-index: 999999;
-    width: 100%;
-}
-
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
     background-color: darkcyan;
-}
-  
-li {
-    float: left;
+    overflow: hidden;
 }
 
-li a {
-    display: block;
-    color: white;
+.navbar a {
+    float: left;
+    color: #f2f2f2;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+    font-size: 17px;
 }
 
-  /* Change the link color to #111 (black) on hover */
-li a:hover {
-    background-color: #111;
+.navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.right-nav {
+    float: right;
 }
