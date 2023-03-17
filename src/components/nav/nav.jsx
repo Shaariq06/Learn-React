@@ -1,20 +1,43 @@
-import './nav.css';
+import { useState } from "react";
+import "./nav.css";
 
-const Nav = ({links}) => {
+const Nav = ({ links }) => {
+  const [isActive, setActive] = useState(false);
+
+  const toggleMobileMenu = (menu) => {
+    setActive(!isActive);
+  };
+
   return (
-    <div className='navbar'>
-        {/* <section>
-            <ul>
-              <li><a>left section</a></li>
-            </ul>
-        </section> */}
-        <div className='right-nav'>
-          {links.map(({link, label}) => (
-          <a href={link} className="nav-lower-section-link">{label}</a>
+    <header>
+      <div id="brand">
+        <a href="/">New Parks Academy</a>
+      </div>
+      <div className="navbar">
+        <div className="right-nav">
+          {links.map(({ link, label }, i) => (
+            <a key={i} href={link} className="nav-lower-section-link">
+              {label}
+            </a>
           ))}
         </div>
-    </div>
-  )
-}
+      </div>
+      <div id="hamburger-icon" onClick={toggleMobileMenu}>
+        <div className="bar1"></div>
+        <div className="bar2"></div>
+        <div className="bar3"></div>
+        <ul className={`mobile-menu + ${isActive ? "open":""} `}>
+          {links.map(({ link, label }, i) => (
+            <li key={i}>
+              <a href={link} className="nav-lower-section-link">
+                {label}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </header>
+  );
+};
 
-export default Nav
+export default Nav;

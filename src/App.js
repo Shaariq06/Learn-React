@@ -10,8 +10,10 @@ import Nav from './components/nav';
 
 function App() {
 
-  const links = [{link: "url.com" ,label: "Home"},
+  const links = [{link: "/" ,label: "Home"},
     {link: "url.com", label: "Salaah Times"},
+    {link: "url.com", label: "Donations"},
+    {link: "url.com", label: "Donations"},
     {link: "url.com", label: "Donations"},
     ]
 
