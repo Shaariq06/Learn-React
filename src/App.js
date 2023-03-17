@@ -1,9 +1,19 @@
 import './App.css';
 import { useState } from 'react';
 import { Navigate } from 'react-router-dom';
+import Header from './components/header';
+import Button from './components/button';
+import Input from './components/input';
+import Form from './components/form';
+import Nav from './components/nav';
 
 
 function App() {
+
+  const links = [{link: "url.com" ,label: "Home"},
+    {link: "url.com", label: "Salaah Times"},
+    {link: "url.com", label: "Donations"},
+    ]
 
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
@@ -23,9 +33,6 @@ function App() {
 }
 
 const submitHandler = (event) => {
-  event.stopPropagation();
-  event.preventDefault();
-  
   if (firstName !== "" && lastName !== "") {
     setFormValues({
       firstName: firstName,
@@ -37,17 +44,13 @@ const submitHandler = (event) => {
 
   return (
     <div className="App">
-      <h1 className='titles'>React Form</h1>
+      <Nav links={links}></Nav>
+
+      <Header>React Form</Header>
       <form>
-        <p>
-          First Name: <input type = "text" name='firstName' placeholder='First name' onChange={changeHandler}/>
-        </p>
-        <p>
-          Last Name: <input type = "text" name = 'lastName' placeholder='Last name' onChange={changeHandler}/>
-        </p>
-        <p>
-          <button className='btn-submit' onClick={submitHandler}>Submit</button>
-        </p>
+        <Input name="firstName" type="text" placeHolder="First name" onChange={changeHandler} label="First Name: " />
+        <Input name="lastName" type="text" placeHolder="Last name" onChange={changeHandler} label="Last Name: " />
+        <Button onClick={submitHandler}>Submit</Button>
       </form>
       {showUserDetails && (<Navigate to="/user-details" replace={true} state={formValues}/>)}
     </div>

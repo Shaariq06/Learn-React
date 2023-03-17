@@ -19,7 +19,7 @@ const router = createBrowserRouter(
       <Route path="user-details" element={<UserDetails />} />
     </Route>
   ), {
-    basename: '/Learn-React'
+    // basename: '/Learn-React'
   }
 );
 

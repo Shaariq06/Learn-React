@@ -1,13 +1,17 @@
 import { useLocation} from "react-router-dom"
+import Button from "./components/button";
+import Header from "./components/header";
 
 export const UserDetails = (props) => {
     const {state} = useLocation();
 
     return (
         <div>
-            <h2 className="titles">User Details</h2>
-            <p>First Name: {state.firstName}</p>
-            <p>Last Name: {state.lastName}</p>
+            <Header>User Details</Header>
+            <p>Thank you {state.firstName} {state.lastName} for submitting!</p>
+            <a href="/">
+                <Button>Go back to homepage</Button>
+            </a>
         </div>
     )
 }

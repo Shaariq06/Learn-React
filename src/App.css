@@ -10,6 +10,10 @@ body {
   justify-content: center;
 }
 
+.root {
+  width: 100%;
+}
+
 input {
   width: 50%;
   padding: 12px 20px;
